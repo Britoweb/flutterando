@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ola_mundo/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -47,9 +48,10 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    if (email == 'a@b.com' &&
-                        password == '123') {
-                      print('Autenticando...');
+                    if (email == 'a@b.com' && password == '123') {
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: (context) => HomePage())
+                      );
                     } else {
                       print('Login Inválido');
                     }
