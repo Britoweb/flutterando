@@ -24,6 +24,14 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+
+                Container(
+                  width: 100,
+                  height: 100, 
+                  child: Image.network
+                  ('https://img1.gratispng.com/20180204/wze/kisspng-macintosh-mac-os-x-lion-macos-macbook-operating-sy-apple-logo-5a77a761e20a32.4466539815177910739259.jpg')),
+
+                Container(height: 20),
                 TextField(
                   onChanged: (text) {
                     email = text;
