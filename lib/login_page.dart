@@ -32,29 +32,36 @@ class _LoginPageState extends State<LoginPage> {
                       child: Image.asset('assets/images/logo.jpg'),
                     ),
                     Container(height: 20),
-                    TextField(
-                      onChanged: (text) {
-                        email = text;
-                      },
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
-                          labelText: 'Email', border: OutlineInputBorder()),
+                    Card(
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 20, right: 12, bottom: 12, left: 12),
+                        child: Column(children: [
+                          TextField(
+                        onChanged: (text) {
+                          email = text;
+                        },
+                        keyboardType: TextInputType.emailAddress,
+                        decoration: InputDecoration(
+                            labelText: 'Email', border: OutlineInputBorder()),
                     ),
                     SizedBox(
-                      height: 10,
+                        height: 10,
                     ),
                     TextField(
-                      onChanged: (text) {
-                        password = text;
-                      },
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          labelText: 'Password', border: OutlineInputBorder()),
+                        onChanged: (text) {
+                          password = text;
+                        },
+                        obscureText: true,
+                        decoration: InputDecoration(
+                            labelText: 'Password', border: OutlineInputBorder()),
                     ),
                     SizedBox(
                       height: 15,
                     ),
                     ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.red),
+                      ),
                       onPressed: () {
                         if (email == 'a@b.com' && password == '123') {
                           Navigator.of(context).pushReplacementNamed('/home');
@@ -62,8 +69,15 @@ class _LoginPageState extends State<LoginPage> {
                           print('Login Inválido');
                         }
                       },
-                      child: Text('Entrar'),
-                    )
+                      child: Container(
+                        width: double.infinity,
+                        child: Text('Entrar', textAlign: TextAlign.center)),
+                    ),
+                        ],),
+                      ),
+                    ),
+                    
+                    
                   ],
                 ),
               ),
