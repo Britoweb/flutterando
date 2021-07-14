@@ -1,6 +1,6 @@
-# ola_mundo
+# Projeto canal Flutterando
 
-A new Flutter project.
+Estudo de Flutter através de vídeos do Youtube.
 
 ## Getting Started
 
