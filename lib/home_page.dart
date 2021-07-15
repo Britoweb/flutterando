@@ -21,7 +21,7 @@ class HomePageState extends State<HomePage> {
             UserAccountsDrawerHeader(
               currentAccountPicture: ClipRRect(
                 borderRadius: BorderRadius.circular(40),
-                
+
                 child: Image.network(
                   'https://w7.pngwing.com/pngs/524/696/png-transparent-computer-icons-user-symbol-symbol-miscellaneous-black-computer-icons.png'),
               ),
@@ -41,6 +41,14 @@ class HomePageState extends State<HomePage> {
               subtitle: Text('Finalizar sessão'),
               onTap: () {
                 Navigator.of(context).pushReplacementNamed('/');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.exit_to_app),
+              title: Text('Desafio'),
+              subtitle: Text('Desafio Proposto'),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/desafio_flutter');
               },
             ),
           ],

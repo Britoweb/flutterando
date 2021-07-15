@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ola_mundo/app_controller.dart';
+import 'package:ola_mundo/desafio_flutter.dart';
 import 'package:ola_mundo/home_page.dart';
 import 'package:ola_mundo/login_page.dart';
 
@@ -20,6 +21,7 @@ class AppWidget extends StatelessWidget {
             routes: {
               '/': (context) => LoginPage(),
               '/home': (context) => HomePage(),
+              '/desafio_flutter': (context) => desafio(),
             },
           );
         });
