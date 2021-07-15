@@ -15,6 +15,33 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+              currentAccountPicture: Image.network(
+                'https://w7.pngwing.com/pngs/524/696/png-transparent-computer-icons-user-symbol-symbol-miscellaneous-black-computer-icons.png'),
+              accountName: Text('Rafael Brito'), 
+              accountEmail: Text('rafaelbrito.web@gmail.com')),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Início'),
+              subtitle: Text('tela de início'),
+              onTap: () {
+                print('home');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.exit_to_app),
+              title: Text('Logout'),
+              subtitle: Text('Finalizar sessão'),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/');
+              },
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         title: Text('Home Page'),
         actions: [
@@ -38,19 +65,18 @@ class HomePageState extends State<HomePage> {
                   width: 50,
                   height: 50,
                   color: Colors.blueGrey,
-                  ),
+                ),
                 Container(
                   width: 50,
                   height: 50,
                   color: Colors.blueGrey,
-                  ),
+                ),
                 Container(
                   width: 50,
                   height: 50,
                   color: Colors.blueGrey,
-                  ),
+                ),
               ],
-
             ),
           ],
         ),
@@ -67,16 +93,13 @@ class HomePageState extends State<HomePage> {
   }
 }
 
-
 class CustomSwitch extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Switch(
-          value: AppController.instance.isDartTheme,
-          onChanged: (value) {
-            AppController.instance.changeTheme();
-          }
-        );
+        value: AppController.instance.isDartTheme,
+        onChanged: (value) {
+          AppController.instance.changeTheme();
+        });
   }
 }
