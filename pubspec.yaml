@@ -61,6 +61,7 @@ flutter:
   assets:
     - assets/images/logo.jpg
     - assets/images/background.jpg
+    - assets/images/logo_tinder.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
